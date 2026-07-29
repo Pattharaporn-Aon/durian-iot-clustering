@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Feature-Scaling and Stability-Testing Pipeline for Clustering Small Orchard IoT Datasets"
+type: software
+authors:
+  - given-names: Pattharaporn
+    family-names: Thongnim
+    email: pattharaporn@go.buu.ac.th
+    affiliation: "Department of Mathematics, Faculty of Science, Burapha University"
+  - given-names: Janjira
+    family-names: Piladaeng
+    email: janjira.pi@buu.ac.th
+    affiliation: "Department of Mathematics, Faculty of Science, Burapha University"
+  - given-names: Phaitoon
+    family-names: Srinil
+    affiliation: "Information Technology and Data Science, Faculty of Science and Arts, Burapha University"
+license: MIT
+repository-code: "https://github.com/USERNAME/durian-iot-clustering"
+keywords:
+  - precision agriculture
+  - Internet of Things
+  - feature scaling
+  - clustering
+  - cluster stability
