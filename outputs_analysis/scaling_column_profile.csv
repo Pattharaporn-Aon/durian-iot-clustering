@@ -1,0 +1,7 @@
+column,skewness,pct_zero,outlier_frac_%,recommended
+temp_mean,-1.17,0.0,3.2,Robust or log+Standard
+humid_mean,-0.54,0.0,0.0,Robust or log+Standard
+rain_sum,5.53,70.3,14.6,Robust (median/IQR)
+wind_mean,0.54,1.6,1.1,Robust or log+Standard
+vpd_mean,0.23,0.0,1.6,Standard (z-score)
+lux_sum,-0.02,0.0,8.1,Standard (z-score)
