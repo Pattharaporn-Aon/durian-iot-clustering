@@ -1,0 +1,46 @@
+name: Run analysis pipeline
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'outputs_analysis/**'
+  workflow_dispatch:        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write           # needed to commit the generated figures back
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the analysis pipeline
+        run: |
+          python durian_analysis.py
+          python scaling_comparison.py
+          python clustering_models.py
+          python stability_analysis.py
+          python silhouette_null.py
+
+      - name: Upload outputs as a downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: analysis-outputs
+          path: outputs_analysis/
+
+      - name: Commit generated figures/tables back to the repo
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs_analysis/
+          git diff --staged --quiet || git commit -m "CI: regenerate analysis outputs [skip ci]"
+          git push
