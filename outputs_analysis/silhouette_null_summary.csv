@@ -1,0 +1,5 @@
+scaler,observed_sil,null_mean,null_95pct,p_value
+None (raw),0.516,0.515,0.516,0.004
+Min-Max,0.15,0.229,0.342,0.901
+Standard,0.18,0.198,0.306,0.593
+Robust,0.226,0.2,0.296,0.303

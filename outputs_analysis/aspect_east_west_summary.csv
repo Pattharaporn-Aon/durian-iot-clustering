@@ -1,0 +1,4 @@
+variable,East_mean,West_mean,t_pvalue,n_per_group
+C/N (all visits),23.56,23.12,0.448,16
+Flower (Feb),1958.25,1331.5,0.14,4
+Durian (Apr),38.0,34.25,0.582,4
