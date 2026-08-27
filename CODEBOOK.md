@@ -22,8 +22,13 @@ respective factors.
 | --- | --- |
 | `A` | Zone A of the orchard block |
 | `B` | Zone B of the orchard block |
+| `C` | Zone C — **excluded from all analyses for data-quality reasons** |
 
-Zones are pooled in the analysis; see Materials and Methods, *Grouping by canopy aspect*.
+Every analysis script applies `EXCLUDE_ZONES = ("C",)` before any computation, so
+Zone C appears in the raw field workbook (`PSN.xlsx`) but not in
+`merged_field_weather.csv` or in any published figure or table. The two retained
+zones are pooled in the analysis; see Materials and Methods, *Grouping by canopy
+aspect*.
 
 ### `Group` — tree group within a zone (nominal, **stored numerically**)
 
@@ -102,6 +107,14 @@ field workbook, and a cleaned numeric column used in the analysis.
 | --- | --- | --- |
 | `-` (hyphen) | Variable not recorded at this visit by design | Raw columns `C/N`, `Flower`, `Durian` |
 | *(empty cell)* | Missing / not applicable | Cleaned columns `cn`, `flower`, `durian`, and all `w30_*` / `w60_*` columns |
+
+### Note on the raw workbook (`PSN.xlsx`)
+
+The group column is misspelled `Gorup` in the original field workbook. Every
+analysis script corrects it on load with
+`pd.read_excel(PSN).rename(columns={"Gorup": "Group"})`, and the column is named
+`Group` throughout `merged_field_weather.csv` and this codebook. Anyone reading
+`PSN.xlsx` directly should expect the misspelled header.
 
 An empty cell in a `w30_*` or `w60_*` column means the microclimate window preceding
 that visit had insufficient sensor coverage — this affects all of visit 1, which
