@@ -1,24 +1,36 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software or dataset, please cite it as below."
 title: "Feature-Scaling and Stability-Testing Pipeline for Clustering Small Orchard IoT Datasets"
+abstract: >-
+  Analysis code and reproducibility package for the study "A feature-scaling and
+  stability-testing pipeline for clustering small orchard IoT datasets". Couples
+  hourly IoT orchard-microclimate data with periodic field measurements (leaf C/N
+  ratio, flowering, fruit set) and clusters a small, heterogeneous dataset by
+  treating feature scaling as an explicit modelling decision and testing cluster
+  stability before interpretation.
 type: software
 authors:
   - given-names: Pattharaporn
     family-names: Thongnim
     email: pattharaporn@go.buu.ac.th
-    affiliation: "Department of Mathematics, Faculty of Science, Burapha University"
+    affiliation: "Department of Mathematics, Faculty of Science, Burapha University, Chon Buri, Thailand"
   - given-names: Janjira
     family-names: Piladaeng
     email: janjira.pi@buu.ac.th
-    affiliation: "Department of Mathematics, Faculty of Science, Burapha University"
+    affiliation: "Department of Mathematics, Faculty of Science, Burapha University, Chon Buri, Thailand"
   - given-names: Phaitoon
     family-names: Srinil
-    affiliation: "Information Technology and Data Science, Faculty of Science and Arts, Burapha University"
+    affiliation: "Information Technology and Data Science, Faculty of Science and Arts, Burapha University, Chanthaburi, Thailand"
 license: MIT
-repository-code: "https://github.com/USERNAME/durian-iot-clustering"
+repository-code: "https://github.com/Pattharaporn-Aon/durian-iot-clustering"
 keywords:
   - precision agriculture
   - Internet of Things
   - feature scaling
   - clustering
   - cluster stability
+  - durian
+identifiers:
+  - type: doi
+    value: "10.17605/OSF.IO/68FC5"
+    description: "OSF archive of the underlying dataset"
