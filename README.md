@@ -26,7 +26,8 @@ Chanthaburi, Thailand, and evaluates:
 - whether the recovered grouping survives a change of clustering algorithm;
 - whether the grouping is stable under bootstrap resampling and significant against a permutation null.
 
-All figures and tables in the manuscript are reproduced by the four scripts below.
+All nine figures and every table in the manuscript are reproduced by the five
+scripts described below.
 
 ---
 
@@ -160,8 +161,9 @@ print(df["unit"].unique())
 2. **Data cleaning.** The `C/N` field is parsed from its `"22:1"` string form to a
    numeric ratio; not-recorded markers (`-`) are converted to missing; windows with
    insufficient sensor coverage are flagged via `ndays`.
-3. **Grouping.** Because a single small block provides too few zones for a zone-level
-   contrast, zones are pooled and canopy aspect (East vs. West) is used as the primary
+3. **Grouping.** Zone C is dropped for data-quality reasons. Because a single small
+   block then provides too few zones for a zone-level contrast, the two remaining
+   zones are pooled and canopy aspect (East vs. West) is used as the primary
    grouping, giving 8 units of 2 zones × 2 groups × 2 aspects.
 4. **Feature scaling.** Four scalers are compared on the variance share held by the
    dominant column and on the resulting silhouette coefficient. Three scaling scopes
