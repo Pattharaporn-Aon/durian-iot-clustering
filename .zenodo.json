@@ -1,13 +1,13 @@
 {
   "title": "Feature-Scaling and Stability-Testing Pipeline for Clustering Small Orchard IoT Datasets",
-  "description": "Analysis code and reproducibility package for the MethodsX article. Couples hourly IoT microclimate with periodic field phenology and clusters a small orchard dataset with explicit feature scaling and bootstrap/permutation stability testing.",
+  "description": "Analysis code and reproducibility package for the study \"A feature-scaling and stability-testing pipeline for clustering small orchard IoT datasets\" (submitted to PeerJ Computer Science). Couples hourly IoT microclimate with periodic field phenology and clusters a small orchard dataset with explicit feature scaling and bootstrap/permutation stability testing.",
   "license": "MIT",
   "upload_type": "software",
   "keywords": ["precision agriculture", "Internet of Things", "feature scaling", "clustering", "cluster stability", "durian"],
   "creators": [
-    {"name": "Thongnim, Pattharaporn", "affiliation": "Burapha University"},
-    {"name": "Piladaeng, Janjira", "affiliation": "Burapha University"},
-    {"name": "Srinil, Phaitoon", "affiliation": "Burapha University"}
+    {"name": "Thongnim, Pattharaporn", "affiliation": "Department of Mathematics, Faculty of Science, Burapha University, Chon Buri, Thailand"},
+    {"name": "Piladaeng, Janjira", "affiliation": "Department of Mathematics, Faculty of Science, Burapha University, Chon Buri, Thailand"},
+    {"name": "Srinil, Phaitoon", "affiliation": "Information Technology and Data Science, Faculty of Science and Arts, Burapha University, Chanthaburi, Thailand"}
   ],
   "related_identifiers": [
     {"relation": "isSupplementTo", "identifier": "10.17605/OSF.IO/68FC5", "scheme": "doi"}
