@@ -213,4 +213,4 @@ For pull requests, please open an issue first to describe the proposed change.
 ## Contact
 
 Pattharaporn Thongnim — Department of Mathematics, Faculty of Science,
-Burapha University, Chon Buri, Thailand — <pattharaporn@go.buu.ac.th>
+Burapha University, Chon Buri, Thailand — <pattharaporn@buu.ac.th>
