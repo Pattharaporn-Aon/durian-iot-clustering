@@ -5,11 +5,11 @@ venv/
 .venv/
 .ipynb_checkpoints/
 
-# Generated output
-figures/*.png
-figures/*.pdf
-
 # OS / editor
 .DS_Store
 *.swp
 .vscode/
+
+# Note: outputs_analysis/ is deliberately NOT ignored. The figures and tables
+# there are regenerated and committed by the CI workflow so that the published
+# outputs always match the code in this repository.
