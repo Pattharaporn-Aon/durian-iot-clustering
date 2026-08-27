@@ -10,11 +10,19 @@ on:
 permissions:
   contents: write           # needed to commit the generated figures back
 
+# If a newer push arrives while this run is still going, cancel the older run
+# so two runs can never race to push to main at the same time.
+concurrency:
+  group: run-pipeline-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # full history, so `git pull --rebase` works
 
       - uses: actions/setup-python@v5
         with:
@@ -41,6 +49,24 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add outputs_analysis/
-          git diff --staged --quiet || git commit -m "CI: regenerate analysis outputs [skip ci]"
-          git push
+          if git diff --staged --quiet; then
+            echo "Outputs unchanged - nothing to commit."
+            exit 0
+          fi
+          git commit -m "CI: regenerate analysis outputs [skip ci]"
+
+          # main may have moved on while the pipeline was running.
+          # Rebase onto whatever is there now, then push. Retry a few times.
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "Pushed analysis outputs successfully."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed - retrying in 10s..."
+            sleep 10
+          done
+
+          echo "Could not push analysis outputs after 3 attempts."
+          exit 1
