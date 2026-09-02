@@ -47,8 +47,8 @@ jobs:
 
       - name: Commit generated figures/tables back to the repo
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "Pattharaporn-Aon"
+          git config user.email "pattharaporn@buu.ac.th"
 
           git add outputs_analysis/
           if git diff --staged --quiet; then
