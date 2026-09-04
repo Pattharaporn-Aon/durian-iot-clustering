@@ -1,5 +1,11 @@
 # A Feature-Scaling and Stability-Testing Pipeline for Clustering Small Orchard IoT Datasets
 
+[![Run analysis pipeline](https://github.com/Pattharaporn-Aon/durian-iot-clustering/actions/workflows/run-pipeline.yml/badge.svg)](https://github.com/Pattharaporn-Aon/durian-iot-clustering/actions/workflows/run-pipeline.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2F68FC5-blue.svg)](https://doi.org/10.17605/OSF.IO/68FC5)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+
 Analysis code and data for the manuscript:
 
 > Thongnim, P., Piladaeng, J., & Srinil, P. *A feature-scaling and stability-testing
@@ -28,6 +34,32 @@ Chanthaburi, Thailand, and evaluates:
 
 All nine figures and every table in the manuscript are reproduced by the five
 scripts described below.
+
+---
+
+## Repository Structure
+
+```
+durian-iot-clustering/
+├── IoT_Sensor_Hourly.csv        # Raw input  - hourly microclimate record (4,409 rows)
+├── PSN.xlsx                     # Raw input  - field-measurement workbook
+├── merged_field_weather.csv     # Derived    - analysis-ready table (32 x 37)
+├── durian_analysis.py           # Feature engineering, C/N trend, canopy contrasts
+├── scaling_comparison.py        # Scaler and scaling-scope comparison
+├── clustering_models.py         # Clustering + algorithm benchmark
+├── stability_analysis.py        # Bootstrap stability + permutation test
+├── silhouette_null.py           # Per-scaler silhouette null distribution
+├── outputs_analysis/            # Generated figures (PNG) and tables (CSV)
+├── requirements.txt             # Pinned dependencies
+├── DATA_README.md               # Column dictionary
+├── CODEBOOK.md                  # Categorical codes -> factor levels
+├── CITATION.cff                 # Machine-readable citation metadata
+├── CONTRIBUTING.md              # How to report issues and propose changes
+├── CODE_OF_CONDUCT.md           # Community expectations
+├── LICENSE                      # MIT (code)
+└── .github/workflows/
+    └── run-pipeline.yml         # CI - reruns the pipeline on every push
+```
 
 ---
 
@@ -86,7 +118,8 @@ for data-quality reasons, leaving the 8 canopy units (2 zones × 2 groups ×
 
 ## Requirements
 
-- Python 3.11 (the version used for the published results; 3.10+ should also work)
+- **Python 3.11 or newer is required.** The pinned versions of NumPy and pandas
+  declare `Requires-Python >= 3.11`, so installation fails on Python 3.10.
 - Package versions as pinned in [`requirements.txt`](requirements.txt):
 
 ```
@@ -208,7 +241,14 @@ Machine-readable metadata is in [`CITATION.cff`](CITATION.cff). The dataset DOI 
 
 Questions, bug reports and suggested improvements are welcome via
 [GitHub Issues](https://github.com/Pattharaporn-Aon/durian-iot-clustering/issues).
-For pull requests, please open an issue first to describe the proposed change.
+For pull requests, please open an issue first to describe the proposed change —
+see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full guidelines, including how
+changes affecting `outputs_analysis/` are reviewed.
+
+## Code of Conduct
+
+Everyone taking part in this project is expected to follow the
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Contact
 
