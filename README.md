@@ -3,7 +3,8 @@
 [![Run analysis pipeline](https://github.com/Pattharaporn-Aon/durian-iot-clustering/actions/workflows/run-pipeline.yml/badge.svg)](https://github.com/Pattharaporn-Aon/durian-iot-clustering/actions/workflows/run-pipeline.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2F68FC5-blue.svg)](https://doi.org/10.17605/OSF.IO/68FC5)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22290738.svg)](https://doi.org/10.5281/zenodo.22290738)
+[![Data DOI](https://img.shields.io/badge/Data%20(OSF)-10.17605%2FOSF.IO%2F68FC5-blue.svg)](https://doi.org/10.17605/OSF.IO/68FC5)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 
 Analysis code and data for the manuscript:
@@ -225,10 +226,28 @@ software release:
   year    = {2026},
   note    = {Under review}
 }
+
+@software{thongnim_pipeline_2026,
+  author    = {Thongnim, Pattharaporn and Piladaeng, Janjira and Srinil, Phaitoon},
+  title     = {Feature-Scaling and Stability-Testing Pipeline for Clustering
+               Small Orchard {IoT} Datasets},
+  version   = {v1.0.0},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22290738},
+  url       = {https://doi.org/10.5281/zenodo.22290738}
+}
 ```
 
-Machine-readable metadata is in [`CITATION.cff`](CITATION.cff). The dataset DOI is
-[10.17605/OSF.IO/68FC5](https://doi.org/10.17605/OSF.IO/68FC5).
+Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
+
+| Archive | DOI |
+| --- | --- |
+| Software (this repository, v1.0.0) | [10.5281/zenodo.22290738](https://doi.org/10.5281/zenodo.22290738) |
+| Dataset (OSF) | [10.17605/OSF.IO/68FC5](https://doi.org/10.17605/OSF.IO/68FC5) |
+
+Cite the version DOI above (`...22290738`) rather than the Zenodo concept DOI, so
+that the archived code matches the results reported in the article exactly.
 
 ---
 

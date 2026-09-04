@@ -9,6 +9,9 @@ abstract: >-
   treating feature scaling as an explicit modelling decision and testing cluster
   stability before interpretation.
 type: software
+version: v1.0.0
+date-released: "2026-09-04"
+doi: "10.5281/zenodo.22290738"
 authors:
   - given-names: Pattharaporn
     family-names: Thongnim
@@ -31,6 +34,9 @@ keywords:
   - cluster stability
   - durian
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22290738"
+    description: "Zenodo archive of this software release (v1.0.0)"
   - type: doi
     value: "10.17605/OSF.IO/68FC5"
     description: "OSF archive of the underlying dataset"
