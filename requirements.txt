@@ -1,9 +1,10 @@
-# Exact versions used to produce the figures and tables committed to
-# outputs_analysis/ (Python 3.11, GitHub Actions ubuntu-latest).
-# Transitive dependencies are resolved automatically by pip.
+# Exact package versions used to produce the published figures and tables.
+# Reproduce the environment with:  pip install -r requirements.txt
+# Verify on your machine with:     pip freeze
+
 numpy==2.4.6
 pandas==3.0.5
 scipy==1.17.1
 scikit-learn==1.9.0
 matplotlib==3.11.1
-openpyxl==3.1.5
+openpyxl==3.1.5          # required by pandas.read_excel() to read PSN.xlsx
